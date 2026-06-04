@@ -2,6 +2,10 @@ name: 'Capawesome Cloud Build Action for GitHub Actions'
 description: 'Trigger Mobile Builds with Capawesome Cloud.'
 author: 'Robin Genz <mail@robingenz.dev>'
 
+branding:
+  icon: 'arrow-up-circle'
+  color: 'purple'
+
 inputs:
   appId:
     description: 'The Capawesome Cloud app ID.'
