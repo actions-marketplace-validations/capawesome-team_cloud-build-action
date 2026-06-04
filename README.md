@@ -93,10 +93,15 @@ jobs:
           certificate: 'Release Keystore'
           aab: 'app-release.aab'
           token: ${{ secrets.CAPAWESOME_TOKEN }}
+      - name: Print build outputs
+        run: |
+          echo "Build ID: ${{ steps.build.outputs.buildId }}"
+          echo "Build number: ${{ steps.build.outputs.buildNumber }}"
+          echo "Build URL: ${{ steps.build.outputs.buildUrl }}"
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: app-release
+          name: app-release-${{ steps.build.outputs.buildNumber }}
           path: app-release.aab
 ```
 
