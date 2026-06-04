@@ -1,5 +1,5 @@
-name: 'Capawesome Cloud Build Action'
-description: 'Create a native app build on Capawesome Cloud Runners.'
+name: 'Capawesome Cloud Build Action for GitHub Actions'
+description: 'Trigger Mobile Builds with Capawesome Cloud.'
 author: 'Robin Genz <mail@robingenz.dev>'
 
 inputs:
