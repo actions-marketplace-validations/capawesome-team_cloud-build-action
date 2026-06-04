@@ -1,4 +1,4 @@
-# cloud-build-action
+# Capawesome Cloud Build Action for GitHub Actions
 
 [![CI](https://github.com/capawesome-team/cloud-build-action/actions/workflows/ci.yml/badge.svg)](https://github.com/capawesome-team/cloud-build-action/actions/workflows/ci.yml)
 [![GitHub Marketplace](https://img.shields.io/badge/Marketplace-Capawesome%20Cloud%20Build-blue?logo=github)](https://github.com/marketplace/actions/capawesome-cloud-build-action)
