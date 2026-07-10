@@ -1,7 +1,7 @@
 # Capawesome Cloud Build Action for GitHub Actions
 
 [![CI](https://github.com/capawesome-team/cloud-build-action/actions/workflows/ci.yml/badge.svg)](https://github.com/capawesome-team/cloud-build-action/actions/workflows/ci.yml)
-[![GitHub Marketplace](https://img.shields.io/badge/Marketplace-Capawesome%20Cloud%20Build-blue?logo=github)](https://github.com/marketplace/actions/capawesome-cloud-build-action)
+[![GitHub Marketplace](https://img.shields.io/badge/Marketplace-Capawesome%20Cloud%20Build-blue?logo=github)](https://github.com/marketplace/actions/capawesome-cloud-build-action-for-github-actions)
 [![License](https://img.shields.io/github/license/capawesome-team/cloud-build-action)](./LICENSE)
 
 GitHub Action to create a native app build on [Capawesome Cloud](https://cloud.capawesome.io/) Runners.
