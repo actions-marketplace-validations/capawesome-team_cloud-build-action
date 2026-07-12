@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.2](https://github.com/capawesome-team/cloud-build-action/compare/v0.1.1...v0.1.2) (2026-07-12)
+
+
+### Bug Fixes
+
+* align share outputs with renamed CLI JSON fields ([#3](https://github.com/capawesome-team/cloud-build-action/issues/3)) ([9ecfee8](https://github.com/capawesome-team/cloud-build-action/commit/9ecfee8301898c73ed0552ebff768c5a937d7492))
+
 ## [0.1.1](https://github.com/capawesome-team/cloud-build-action/compare/v0.1.0...v0.1.1) (2026-07-12)
 
 
