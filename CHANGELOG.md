@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.1](https://github.com/capawesome-team/cloud-build-action/compare/v0.1.0...v0.1.1) (2026-07-12)
+
+
+### Features
+
+* add `share` input and share outputs ([#2](https://github.com/capawesome-team/cloud-build-action/issues/2)) ([b5fa003](https://github.com/capawesome-team/cloud-build-action/commit/b5fa0035103d96e9087bd6730145611ca8116471))
+
 ## 0.1.0 (2026-06-04)
 
 
