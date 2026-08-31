@@ -19,11 +19,5 @@
     "Android",
     "iOS"
   ],
-  "license": "MIT",
-  "scripts": {
-    "release": "commit-and-tag-version"
-  },
-  "devDependencies": {
-    "commit-and-tag-version": "^12.4.0"
-  }
+  "license": "MIT"
 }

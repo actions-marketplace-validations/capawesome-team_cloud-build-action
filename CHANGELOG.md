@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [release-please](https://github.com/googleapis/release-please) for commit guidelines.
 
 ## [0.1.2](https://github.com/capawesome-team/cloud-build-action/compare/v0.1.1...v0.1.2) (2026-07-12)
 
@@ -22,7 +22,3 @@ All notable changes to this project will be documented in this file. See [commit
 ### Features
 
 * initial implementation ([#1](https://github.com/capawesome-team/cloud-build-action/issues/1)) ([86de3aa](https://github.com/capawesome-team/cloud-build-action/commit/86de3aa889e2f717d3e9e5b16945fafd19c5c541))
-
-# Changelog
-
-All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
