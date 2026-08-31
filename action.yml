@@ -26,6 +26,8 @@ inputs:
     description: 'Exit immediately after creating the build without waiting for completion. Set to `true` to enable.'
   environment:
     description: 'The name of the environment to use for the build.'
+  failureSummary:
+    description: 'Request an AI-powered failure summary (Capawesome Cloud Assist) if the build fails. Not compatible with `detached`. Set to `true` to enable.'
   gitRef:
     description: 'The Git reference (branch, tag, or commit SHA) to build. Cannot be combined with `path` or `url`.'
   ipa:
@@ -109,6 +111,7 @@ runs:
         DESTINATION: ${{ inputs.destination }}
         DETACHED: ${{ inputs.detached }}
         ENVIRONMENT: ${{ inputs.environment }}
+        FAILURE_SUMMARY: ${{ inputs.failureSummary }}
         GIT_REF: ${{ inputs.gitRef }}
         IPA: ${{ inputs.ipa }}
         SOURCE_PATH: ${{ inputs.path }}
@@ -138,6 +141,7 @@ runs:
         if [ -n "$DESTINATION" ];   then args+=(--destination "$DESTINATION"); fi
         if [ -n "$VARIABLE_FILE" ]; then args+=(--variable-file "$VARIABLE_FILE"); fi
         if [ "$DETACHED" = "true" ]; then args+=(--detached); fi
+        if [ "$FAILURE_SUMMARY" = "true" ]; then args+=(--failure-summary); fi
         if [ "$SHARE" = "true" ]; then args+=(--share); fi
         if [ -n "$SHARE_DESCRIPTION" ];    then args+=(--share-description "$SHARE_DESCRIPTION"); fi
         if [ -n "$SHARE_EXPIRES_IN_DAYS" ]; then args+=(--share-expires-in-days "$SHARE_EXPIRES_IN_DAYS"); fi

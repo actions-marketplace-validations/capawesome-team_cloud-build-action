@@ -40,6 +40,8 @@ GitHub Action to create a native app build on [Capawesome Cloud](https://cloud.c
     detached: ''
     # The name of the environment to use for the build.
     environment: ''
+    # Request an AI-powered failure summary (Capawesome Cloud Assist) if the build fails. Not compatible with `detached`. Set to `true` to enable.
+    failureSummary: ''
     # The Git reference (branch, tag, or commit SHA) to build. Cannot be combined with `path` or `url`.
     gitRef: ''
     # Download the generated IPA file (iOS only). Set to `true` or provide a file path.
@@ -179,6 +181,7 @@ jobs:
 - **Deployment**: Use `channel` (Web only) or `destination` (Android/iOS only) to deploy after a successful build. They cannot be combined, and neither can be combined with `detached`.
 - **Artifacts**: `apk`/`aab` (Android), `ipa` (iOS), and `zip` (Web) download the build artifact to the runner. They cannot be combined with `detached`.
 - **Sharing**: Set `share: true` to create a public share page for the build. Use `shareDescription` to add testing notes and `shareExpiresInDays` to expire the link. It cannot be combined with `detached`. The `shareQrCodeUrl` output is a public PNG image you can embed directly in Markdown or post to services like Slack.
+- **Failure summaries**: Set `failureSummary: true` to have Capawesome Cloud Assist explain why a build failed. The summary is printed in the workflow log after the build fails. It cannot be combined with `detached`. Without it, the CLI prints the command you can run yourself to generate one.
 - **Outputs require [`jq`](https://jqlang.github.io/jq/)**, which is preinstalled on GitHub-hosted runners.
 
 ## License
