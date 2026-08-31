@@ -18,6 +18,8 @@ inputs:
     description: 'The name of the certificate to use for the build.'
   channel:
     description: 'The name of the channel to deploy to (Web only). Cannot be combined with `destination`.'
+  configuration:
+    description: 'The name of the native configuration to use for the build (Android/iOS only).'
   destination:
     description: 'The name of the destination to deploy to (Android/iOS only). Cannot be combined with `channel`.'
   detached:
@@ -103,6 +105,7 @@ runs:
         APK: ${{ inputs.apk }}
         CERTIFICATE: ${{ inputs.certificate }}
         CHANNEL: ${{ inputs.channel }}
+        CONFIGURATION: ${{ inputs.configuration }}
         DESTINATION: ${{ inputs.destination }}
         DETACHED: ${{ inputs.detached }}
         ENVIRONMENT: ${{ inputs.environment }}
@@ -129,6 +132,7 @@ runs:
         if [ -n "$URL" ];           then args+=(--url "$URL"); fi
         if [ -n "$ENVIRONMENT" ];   then args+=(--environment "$ENVIRONMENT"); fi
         if [ -n "$CERTIFICATE" ];   then args+=(--certificate "$CERTIFICATE"); fi
+        if [ -n "$CONFIGURATION" ]; then args+=(--configuration "$CONFIGURATION"); fi
         if [ -n "$STACK" ];         then args+=(--stack "$STACK"); fi
         if [ -n "$CHANNEL" ];       then args+=(--channel "$CHANNEL"); fi
         if [ -n "$DESTINATION" ];   then args+=(--destination "$DESTINATION"); fi
@@ -145,7 +149,7 @@ runs:
           if [ -n "$variable" ]; then args+=(--variable "$variable"); fi
         done <<< "$VARIABLES"
         output_file="$(mktemp)"
-        npx -y @capawesome/cli@4.16.1 "${args[@]}" | tee "$output_file"
+        npx -y @capawesome/cli@4.18.4 "${args[@]}" | tee "$output_file"
         json="$(sed -n '/^{/,$p' "$output_file")"
         build_id="$(printf '%s' "$json" | jq -r '.id // empty')"
         build_number="$(printf '%s' "$json" | jq -r '.numberAsString // empty')"

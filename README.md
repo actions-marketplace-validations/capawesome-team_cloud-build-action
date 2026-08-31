@@ -32,6 +32,8 @@ GitHub Action to create a native app build on [Capawesome Cloud](https://cloud.c
     certificate: ''
     # The name of the channel to deploy to (Web only). Cannot be combined with `destination`.
     channel: ''
+    # The name of the native configuration to use for the build (Android/iOS only).
+    configuration: ''
     # The name of the destination to deploy to (Android/iOS only). Cannot be combined with `channel`.
     destination: ''
     # Exit immediately after creating the build without waiting for completion. Set to `true` to enable.
