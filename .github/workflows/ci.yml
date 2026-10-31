@@ -17,11 +17,12 @@ permissions:
 jobs:
   test-action:
     name: GitHub Actions Test
+    if: github.actor != 'dependabot[bot]'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         id: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Scaffold minimal Capacitor app
         run: |
           set -euo pipefail
